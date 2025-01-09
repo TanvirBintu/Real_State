@@ -23,11 +23,6 @@
                 <i class="fas fa-search"></i>
                 <span>Explore</span>
             </button>
-            <button class="text-white flex items-center space-x-2 relative">
-                <i class="fas fa-gift"></i>
-                <span>Matching</span>
-                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">8</span>
-            </button>
             <button class="text-white flex items-center space-x-2">
                 <i class="fas fa-heart"></i>
                 <span>Favorites</span>
@@ -50,7 +45,7 @@
 <!-- Filters Section -->
 <div class="py-4 px-6 flex items-center justify-between rounded-t-3xl">
 
-    <!-- Left: Search Bar -->
+
     <div class="flex">
         <input
             type="text"
@@ -59,56 +54,42 @@
         />
     </div>
 
-    <!-- Center: Filters -->
+
     <div class="flex items-center space-x-4 ml-[-10px]">
-        <!-- Apartment Button -->
+
         <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
             <span class="material-icons text-white">apartment</span>
             <span>Apartment</span>
             <span class="material-icons text-white">arrow_drop_down</span>
         </button>
 
-        <!-- Pet Friendly Button -->
-        <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
-            <span class="material-icons text-white">pets</span>
-            <span>Pet friendly</span>
-        </button>
-
-        <!-- Swap with Women Button -->
-        <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
-            <span class="material-icons text-white">wc</span>
-            <span>Swap with women</span>
-        </button>
-
-        <!-- 2BD Button -->
         <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
             <span>2BD</span>
             <span class="material-icons text-white">arrow_drop_down</span>
         </button>
     </div>
 
-    <!-- Right: Swap Now and Icons -->
     <div class="flex items-center space-x-4">
-         <!-- Map Icon Button -->
          <button class="mapButton flex items-center justify-center p-3 rounded-full bg-black text-white hover:bg-gray-800">
             <span class="material-icons">map</span>
         </button>
-        <!-- Swap Now Button -->
         <button onclick="openCreatePostModal()" class="px-6 py-2 rounded-full bg-yellow-400 text-white font-bold flex items-center space-x-2 hover:bg-yellow-300 transition duration-300">
             <span class="material-icons">add</span>
             <span>Create Post</span>
         </button>
     </div>
 </div>
-        <!-- Listings Section -->
+
+
 <div id="listingSection" class="grid grid-cols-4 gap-6 rounded-t-3xl px-8 py-8 bg-[#F7F6F2]">
-    <!-- Card -->
+
     <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')" class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+        <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+            <span>Rent</span>
+        </div>
+            
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -126,13 +107,13 @@
         </div>
     </div>
 
-    <!-- Repeat Card -->
     <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')" class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Less</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -149,13 +130,14 @@
             </p>
         </div>
     </div>
-    <!-- Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Sell</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -173,13 +155,14 @@
         </div>
     </div>
 
-    <!-- Repeat Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Less</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -196,13 +179,14 @@
             </p>
         </div>
     </div>
-    <!-- Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Rent</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -220,13 +204,14 @@
         </div>
     </div>
 
-    <!-- Repeat Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Sell</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -243,13 +228,14 @@
             </p>
         </div>
     </div>
-    <!-- Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Less</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -267,13 +253,14 @@
         </div>
     </div>
 
-    <!-- Repeat Card -->
+
     <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
         <div class="relative">
             <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <!-- <div class="absolute top-3 left-3 bg-black text-white p-1 rounded-full">
-                <span>⚡</span>
-            </div> -->
+            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                <span>Sell</span>
+            </div>
+                
             <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
                 <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
             </div>
@@ -291,10 +278,10 @@
         </div>
     </div>
 </div>
-<!-- Modal Section (Initially Hidden) -->
+<!-- Modal  -->
 <div id="createPostModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
     <div class="bg-[#F7F6F2] relative w-[60%] h-[80%] max-w-4xl p-8 rounded-xl">
-        <!-- Close Button -->
+
         <button
             class="absolute top-4 right-4 bg-white text-black p-2 rounded-full"
             onclick="closeCreatePostModal()"
@@ -302,13 +289,12 @@
             <span class="material-icons">close</span>
         </button>
 
-        <!-- Create Post Form -->
+
         <div>
             <div class="grid grid-cols-2 gap-6">
                 
-                <!-- Left Section: Image Upload and Preview -->
                 <div class="space-y-4">
-                    <!-- Main Image Upload Section -->
+
                     <div class="relative">
                         <input 
                             type="file" 
@@ -324,12 +310,9 @@
                                 class="rounded-xl object-cover w-full h-72"
                             />
                         </label>
-                        <!-- <button class="absolute top-4 left-4 bg-black text-white p-2 rounded-full">
-                            <span class="material-icons">flash_on</span>
-                        </button> -->
+
                     </div>
 
-                    <!-- Thumbnail Upload Section -->
                     <div class="grid grid-cols-4 gap-4">
                         <input 
                             type="file" 
@@ -390,11 +373,9 @@
                     </div>
                 </div>
 
-                <!-- Right Section: Form to Add Details -->
                 <div class="space-y-6 overflow-y-auto max-h-[70vh]">
                     <p class="text-4xl font-extrabold text-gray-800">Create Post</p>
 
-                    <!-- Property Information Form -->
                     <div class="bg-white rounded-2xl shadow p-6">
                         <div class="space-y-4">
                             <div>
@@ -419,7 +400,7 @@
                         </div>
                     </div>
 
-                    <!-- Property Details -->
+
                     <div class="bg-white rounded-2xl shadow p-6">
                         <div class="space-y-4">
                             <div>
@@ -439,7 +420,7 @@
                         </div>
                     </div>
 
-                    <!-- Amenities Section -->
+
                     <div class="bg-white rounded-2xl shadow p-6">
                         <p class="text-sm text-gray-500 font-medium mb-4">Amenities</p>
                         <div class="grid grid-cols-3 gap-4">
@@ -470,7 +451,6 @@
                         </div>
                     </div>
 
-                    <!-- Rules Section -->
                     <div class="bg-white rounded-2xl shadow p-6">
                         <p class="text-sm text-gray-500 font-medium mb-4">Rules</p>
                         <div class="flex items-center space-x-4">
@@ -489,7 +469,7 @@
                         </div>
                     </div>
 
-                    <!-- Neighborhood Map Section -->
+
                     <div class="bg-white rounded-2xl shadow p-6">
                         <p class="text-sm text-gray-500 font-medium mb-4">Neighborhood</p>
                         <div class="relative w-full h-48 rounded-lg overflow-hidden">
@@ -497,7 +477,6 @@
                         </div>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="flex justify-end mt-4">
                         <button class="bg-black text-white py-2 px-3 rounded-lg shadow-lg">
                             Create Post
@@ -509,7 +488,7 @@
     </div>
 </div>
 
-<!-- Map Section (Initially Hidden) -->
+
 <div id="mapSection" class="col-span-4 h-screen bg-gray-200 rounded-lg transform translate-y-[100%] opacity-0 transition-all duration-500 ease-in-out hidden">
     <div id="map" class="h-full"></div>
 </div>
@@ -523,61 +502,53 @@
             var mapSection = document.getElementById('mapSection');
             var listingSection = document.getElementById('listingSection');
     
-            // If the map section is already visible, hide it
+
             if (mapSection.classList.contains('opacity-100')) {
                 mapSection.classList.remove('translate-y-0', 'opacity-100');
                 mapSection.classList.add('translate-y-[100%]', 'opacity-0');
                 
-                // After the animation ends, hide the map section completely
                 setTimeout(function() {
                     mapSection.classList.add('hidden');
-                    listingSection.classList.remove('hidden'); // Show the listing section again
-                }, 500); // Match the duration of the animation (500ms)
+                    listingSection.classList.remove('hidden');
+                }, 500);
             } else {
-                // If the map section is hidden, show it
+
                 listingSection.classList.add('hidden');
                 mapSection.classList.remove('hidden');
                 
-                // Wait for the map section to be visible, then apply the slide effect
                 setTimeout(function() {
                     mapSection.classList.remove('translate-y-[100%]', 'opacity-0');
                     mapSection.classList.add('translate-y-0', 'opacity-100');
                     
-                    // Initialize the map only if it's not already initialized
                     if (!mapSection._leaflet_id) {
                         var map = L.map(mapSection).setView([23.8103, 90.4125], 13); // Set initial coordinates (Dhaka, Bangladesh)
                         
-                        // Add OpenStreetMap tile layer
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         }).addTo(map);
                     }
-                }, 100); // Slight delay before applying the slide effect
+                }, 100);
             }
         });
 
         function slideToNewPage(event, url) {
-            // Prevent default link behavior
             event.preventDefault();
           
-            // Get the transition overlay
+
             const transition = document.getElementById('upTransition');
           
-            // Trigger the slide-up animation
             transition.classList.remove('translate-y-full');
           
-            // Wait for the animation to complete, then navigate to the new page
+        
             setTimeout(() => {
               window.location.href = url;
             }, 500); 
           }
 
-          // Function to open the Create Post modal
     function openCreatePostModal() {
         document.getElementById('createPostModal').classList.remove('hidden');
     }
 
-    // Function to close the Create Post modal
     function closeCreatePostModal() {
         document.getElementById('createPostModal').classList.add('hidden');
     }

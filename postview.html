@@ -48,13 +48,13 @@
 <!-- Filters Section -->
 <div class="py-4 px-6 flex items-center justify-between bg-white rounded-t-3xl shadow-sm">
 
-    <!-- Left Section: Back and Profile -->
+
     <div class="flex items-center space-x-4">
-        <!-- Back Button -->
+
         <button id="backButton" onclick="goBackWithAnimation()" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
             <span class="material-icons">arrow_back</span>
         </button>
-        <!-- Profile Info -->
+
         <div class="flex items-center space-x-2">
             <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
             <div class="text-sm">
@@ -68,21 +68,18 @@
             <button class="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs border border-gray-300">3 Reviews</button>
         </div>
     </div>
-
-    <!-- Center Section: Rating and Reviews -->
     
 
-    <!-- Right Section: Icons and Button -->
     <div class="flex items-center space-x-4">
-        <!-- Calendar Icon -->
+
         <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
             <span class="material-icons">calendar_today</span>
         </button>
-        <!-- Favorite Icon -->
+
         <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
             <span class="material-icons">favorite_border</span>
         </button>
-        <!-- Request Swap Button -->
+
         <button class="px-4 py-2 rounded-full bg-yellow-400 text-black font-bold flex items-center space-x-2 hover:bg-yellow-300 transition duration-300">
             <span class="material-icons">person</span>
             <span>Contract Owner</span>
@@ -90,11 +87,10 @@
     </div>
 </div>
 
-        <!-- Listings Section -->
         <div class="bg-[#F7F6F2] px-8 py-8 rounded-t-3xl grid grid-cols-2 gap-6">
-            <!-- Left Section: Main Image and Carousel -->
+
             <div class="space-y-4">
-                <!-- Main Image Section -->
+
                 <div class="relative">
                   <img
                     id="mainImage"
@@ -103,12 +99,8 @@
                     class="rounded-xl object-cover w-full h-72 cursor-pointer"
                     onclick="openModal('https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg')"
                   />
-                  <!-- <button class="absolute top-4 left-4 bg-black text-white p-2 rounded-full">
-                    <span class="material-icons">flash_on</span>
-                  </button> -->
                 </div>
               
-                <!-- Thumbnail Section -->
                 <div class="grid grid-cols-4 gap-4">
                   <img
                     src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
@@ -137,20 +129,18 @@
                 </div>
               </div>
               
-              <!-- Modal Section -->
               <div
                 id="imageModal"
                 class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50"
               >
                 <div class="relative w-[90%] max-w-4xl">
-                  <!-- Modal Image -->
                   <img
                     id="modalImage"
                     src=""
                     alt="Modal Image"
                     class="w-full rounded-lg object-cover"
                   />
-                  <!-- Close Button -->
+
                   <button
                     class="absolute top-4 right-4 bg-white text-black p-2 rounded-full"
                     onclick="closeModal()"
@@ -160,11 +150,9 @@
                 </div>
               </div>
         
-            <!-- Right Section: Details -->
             <div class="space-y-6">
                 <p class="text-4xl font-extrabold text-gray-800">Mirror House</p>
                   
-    <!-- Swap Availability -->
     <div class="bg-white rounded-2xl shadow p-6">
         
         <div class="space-y-2">
@@ -175,7 +163,6 @@
                 <span class="material-icons text-gray-500">place</span>
                 <span>Dhaka, Bangladesh</span>
             </div>
-              <!-- Rent Amount -->
             <div class="flex items-center text-sm text-gray-600 space-x-2">
                 <span class="material-icons text-gray-500">attach_money</span>
                 <span>Rent: $1,500/month</span>
@@ -184,7 +171,7 @@
     </div>
 
     <div class="space-y-0">
-    <!-- Property Info -->
+
     <div class="bg-yellow-400 text-black rounded-2xl shadow flex items-center justify-between px-6 py-4">
         <div class="flex items-center space-x-2">
             <span class="material-icons">hotel</span>
@@ -200,7 +187,7 @@
         </div>
     </div>
 
-    <!-- Amenities -->
+
     <div class="bg-white rounded-2xl shadow p-6">
         <p class="text-sm text-gray-500 font-medium mb-4">Amenities</p>
         <div class="grid grid-cols-3 gap-4">
@@ -231,7 +218,6 @@
         </div>
     </div>
 
-    <!-- Rules -->
     <div class="bg-yellow-400 text-black rounded-2xl shadow flex items-center justify-between px-6 py-4">
         <div class="flex items-center space-x-2">
             <span class="material-icons">pets</span>
@@ -247,7 +233,6 @@
         </div>
     </div>
 </div>
-    <!-- Neighborhood -->
     <div class="bg-white rounded-2xl shadow p-6">
         <p class="text-sm text-gray-500 font-medium mb-4">Neighborhood</p>
         <div id="mapSection" class="relative w-full h-48 rounded-lg overflow-hidden">
@@ -267,31 +252,27 @@
   class="fixed top-0 left-0 w-full h-full bg-white transform translate-x-full transition-transform duration-500 z-50"
 ></div>
     <script>
-        // Function to open the modal and display the clicked image
         function openModal(imageSrc) {
           const modal = document.getElementById('imageModal');
           const modalImage = document.getElementById('modalImage');
-          modalImage.src = imageSrc; // Set the source of the modal image
-          modal.classList.remove('hidden'); // Show the modal
+          modalImage.src = imageSrc;
+          modal.classList.remove('hidden'); 
         }
       
-        // Function to close the modal
         function closeModal() {
           const modal = document.getElementById('imageModal');
-          modal.classList.add('hidden'); // Hide the modal
+          modal.classList.add('hidden');
         }
 
         function goBackWithAnimation() {
-            // Get the transition overlay
             const transition = document.getElementById('pageTransition');
           
-            // Trigger the slide-out animation
+
             transition.classList.remove('translate-x-full');
           
-            // Wait for the animation to complete, then navigate back
             setTimeout(() => {
               window.history.back();
-            }, 500); // Match duration-500 from Tailwind
+            }, 500);
           }
           
       </script>
