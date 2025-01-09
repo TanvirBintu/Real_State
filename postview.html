@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-black">
+    <!-- Navbar -->
+    <nav class="bg-black rounded-t-3xl text-white py-3 px-6 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <h1 class="text-2xl font-bold">Dream <span class="text-yellow-400">Home</span> <span class="text-sm font-medium">Solution</span></h1>
+        </div>
+        <div class="flex items-center space-x-8">
+            <button class="text-white flex items-center space-x-2">
+                <i class="fas fa-search"></i>
+                <span>Explore</span>
+            </button>
+            <button class="text-white flex items-center space-x-2 relative">
+                <i class="fas fa-gift"></i>
+                <span>Matching</span>
+                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">8</span>
+            </button>
+            <button class="text-white flex items-center space-x-2">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </button>
+            <button class="text-white flex items-center space-x-2 relative">
+                <i class="fas fa-comments"></i>
+                <span>Chat</span>
+                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">4</span>
+            </button>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i class="fas fa-bell text-xl relative">
+                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">1</span>
+            </i>
+            <img src="https://img.freepik.com/premium-photo/cheerful-young-man-standing-isolated-orange-wall-one-color-background_953680-3909.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+        </div>
+    </nav>
+
+    <div class="bg-white h-screen rounded-t-3xl">
+<!-- Filters Section -->
+<div class="py-4 px-6 flex items-center justify-between bg-white rounded-t-3xl shadow-sm">
+
+    <!-- Left Section: Back and Profile -->
+    <div class="flex items-center space-x-4">
+        <!-- Back Button -->
+        <button id="backButton" onclick="goBackWithAnimation()" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+            <span class="material-icons">arrow_back</span>
+        </button>
+        <!-- Profile Info -->
+        <div class="flex items-center space-x-2">
+            <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="Profile" class="w-10 h-10 rounded-full" />
+            <div class="text-sm">
+                <p class="font-semibold">Elke</p>
+                <p class="text-gray-500 text-xs">Place Owner</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons text-yellow-500">star</span>
+            <p class="font-semibold text-sm">4.9</p>
+            <button class="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs border border-gray-300">3 Reviews</button>
+        </div>
+    </div>
+
+    <!-- Center Section: Rating and Reviews -->
+    
+
+    <!-- Right Section: Icons and Button -->
+    <div class="flex items-center space-x-4">
+        <!-- Calendar Icon -->
+        <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+            <span class="material-icons">calendar_today</span>
+        </button>
+        <!-- Favorite Icon -->
+        <button class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+            <span class="material-icons">favorite_border</span>
+        </button>
+        <!-- Request Swap Button -->
+        <button class="px-4 py-2 rounded-full bg-yellow-400 text-black font-bold flex items-center space-x-2 hover:bg-yellow-300 transition duration-300">
+            <span class="material-icons">person</span>
+            <span>Contract Owner</span>
+        </button>
+    </div>
+</div>
+
+        <!-- Listings Section -->
+        <div class="bg-[#F7F6F2] px-8 py-8 rounded-t-3xl grid grid-cols-2 gap-6">
+            <!-- Left Section: Main Image and Carousel -->
+            <div class="space-y-4">
+                <!-- Main Image Section -->
+                <div class="relative">
+                  <img
+                    id="mainImage"
+                    src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                    alt="Main Image"
+                    class="rounded-xl object-cover w-full h-72 cursor-pointer"
+                    onclick="openModal('https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg')"
+                  />
+                  <!-- <button class="absolute top-4 left-4 bg-black text-white p-2 rounded-full">
+                    <span class="material-icons">flash_on</span>
+                  </button> -->
+                </div>
+              
+                <!-- Thumbnail Section -->
+                <div class="grid grid-cols-4 gap-4">
+                  <img
+                    src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                    alt="Thumbnail 1"
+                    class="rounded-lg object-cover h-20 w-full cursor-pointer"
+                    onclick="openModal('https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg')"
+                  />
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Thumbnail 2"
+                    class="rounded-lg object-cover h-20 w-full cursor-pointer"
+                    onclick="openModal('https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D')"
+                  />
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Thumbnail 3"
+                    class="rounded-lg object-cover h-20 w-full cursor-pointer"
+                    onclick="openModal('https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D')"
+                  />
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Thumbnail 4"
+                    class="rounded-lg object-cover h-20 w-full cursor-pointer"
+                    onclick="openModal('https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D')"
+                  />
+                </div>
+              </div>
+              
+              <!-- Modal Section -->
+              <div
+                id="imageModal"
+                class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50"
+              >
+                <div class="relative w-[90%] max-w-4xl">
+                  <!-- Modal Image -->
+                  <img
+                    id="modalImage"
+                    src=""
+                    alt="Modal Image"
+                    class="w-full rounded-lg object-cover"
+                  />
+                  <!-- Close Button -->
+                  <button
+                    class="absolute top-4 right-4 bg-white text-black p-2 rounded-full"
+                    onclick="closeModal()"
+                  >
+                    <span class="material-icons">close</span>
+                  </button>
+                </div>
+              </div>
+        
+            <!-- Right Section: Details -->
+            <div class="space-y-6">
+                <p class="text-4xl font-extrabold text-gray-800">Mirror House</p>
+                  
+    <!-- Swap Availability -->
+    <div class="bg-white rounded-2xl shadow p-6">
+        
+        <div class="space-y-2">
+            
+            <div class="flex items-center text-sm text-gray-600 space-x-2">
+                <span class="material-icons text-gray-500">calendar_today</span>
+                <span>Aug 12 – Dec 17</span>
+                <span class="material-icons text-gray-500">place</span>
+                <span>Dhaka, Bangladesh</span>
+            </div>
+              <!-- Rent Amount -->
+            <div class="flex items-center text-sm text-gray-600 space-x-2">
+                <span class="material-icons text-gray-500">attach_money</span>
+                <span>Rent: $1,500/month</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-0">
+    <!-- Property Info -->
+    <div class="bg-yellow-400 text-black rounded-2xl shadow flex items-center justify-between px-6 py-4">
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">hotel</span>
+            <span>4 beds</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">bathtub</span>
+            <span>3 bathrooms</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">crop_square</span>
+            <span>125 m² place size</span>
+        </div>
+    </div>
+
+    <!-- Amenities -->
+    <div class="bg-white rounded-2xl shadow p-6">
+        <p class="text-sm text-gray-500 font-medium mb-4">Amenities</p>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">ac_unit</span>
+                <span>Refrigerator</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">desk</span>
+                <span>Desk</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">microwave</span>
+                <span>Oven</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">coffee</span>
+                <span>Coffee machine</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">local_parking</span>
+                <span>Parking spot</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="material-icons text-gray-600">fireplace</span>
+                <span>Fireplace</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="bg-yellow-400 text-black rounded-2xl shadow flex items-center justify-between px-6 py-4">
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">pets</span>
+            <span>Pet friendly</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">smoke_free</span>
+            <span>No smoking</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="material-icons">child_care</span>
+            <span>Suitable for children</span>
+        </div>
+    </div>
+</div>
+    <!-- Neighborhood -->
+    <div class="bg-white rounded-2xl shadow p-6">
+        <p class="text-sm text-gray-500 font-medium mb-4">Neighborhood</p>
+        <div id="mapSection" class="relative w-full h-48 rounded-lg overflow-hidden">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kY5MuqO_iU_kD1ObkgQP_v4K6wNHC2t9yA&s" alt="">
+        </div>
+    </div>
+    
+</div>
+
+        </div>
+
+
+    </div>
+<!-- Animation Overlay -->
+<div
+  id="pageTransition"
+  class="fixed top-0 left-0 w-full h-full bg-white transform translate-x-full transition-transform duration-500 z-50"
+></div>
+    <script>
+        // Function to open the modal and display the clicked image
+        function openModal(imageSrc) {
+          const modal = document.getElementById('imageModal');
+          const modalImage = document.getElementById('modalImage');
+          modalImage.src = imageSrc; // Set the source of the modal image
+          modal.classList.remove('hidden'); // Show the modal
+        }
+      
+        // Function to close the modal
+        function closeModal() {
+          const modal = document.getElementById('imageModal');
+          modal.classList.add('hidden'); // Hide the modal
+        }
+
+        function goBackWithAnimation() {
+            // Get the transition overlay
+            const transition = document.getElementById('pageTransition');
+          
+            // Trigger the slide-out animation
+            transition.classList.remove('translate-x-full');
+          
+            // Wait for the animation to complete, then navigate back
+            setTimeout(() => {
+              window.history.back();
+            }, 500); // Match duration-500 from Tailwind
+          }
+          
+      </script>
+</body>
+
+</html>
