@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -16,7 +16,8 @@
     <!-- Navbar -->
     <nav class="bg-black text-white py-3 px-6 flex items-center justify-between">
         <div class="flex items-center space-x-4">
-            <h1 class="text-2xl font-bold">Dream <span class="text-yellow-400">Home</span> <span class="text-sm font-medium">Solution</span></h1>
+            <h1 class="text-2xl font-bold">Dream <span class="text-yellow-400">Home</span> <span
+                    class="text-sm font-medium">Solution</span></h1>
         </div>
         <div class="flex items-center space-x-8">
             <button class="text-white flex items-center space-x-2">
@@ -30,484 +31,486 @@
             <button class="text-white flex items-center space-x-2 relative">
                 <i class="fas fa-comments"></i>
                 <span>Chat</span>
-                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                <span
+                    class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">4</span>
             </button>
         </div>
         <div class="flex items-center space-x-4">
             <i class="fas fa-bell text-xl relative">
-                <span class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">1</span>
+                <span
+                    class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">1</span>
             </i>
-            <img src="https://img.freepik.com/premium-photo/cheerful-young-man-standing-isolated-orange-wall-one-color-background_953680-3909.jpg" alt="Profile" class="w-10 h-10 rounded-full">
+            <img src="https://img.freepik.com/premium-photo/cheerful-young-man-standing-isolated-orange-wall-one-color-background_953680-3909.jpg"
+                alt="Profile" class="w-10 h-10 rounded-full">
         </div>
     </nav>
 
     <div class="bg-white h-screen rounded-t-3xl">
-<!-- Filters Section -->
-<div class="py-4 px-6 flex items-center justify-between rounded-t-3xl">
+        <!-- Filters Section -->
+        <div class="py-4 px-6 flex items-center justify-between rounded-t-3xl">
 
 
-    <div class="flex">
-        <input
-            type="text"
-            placeholder="Search"
-            class="w-full px-4 py-2 rounded-full bg-white text-gray-600 border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
-        />
-    </div>
+            <div class="flex">
+                <input type="text" placeholder="Search"
+                    class="w-full px-4 py-2 rounded-full bg-white text-gray-600 border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            </div>
 
 
-    <div class="flex items-center space-x-4 ml-[-10px]">
+            <div class="flex items-center space-x-4 ml-[-10px]">
 
-        <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
-            <span class="material-icons text-white">apartment</span>
-            <span>Apartment</span>
-            <span class="material-icons text-white">arrow_drop_down</span>
-        </button>
+                <button
+                    class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
+                    <span class="material-icons text-white">apartment</span>
+                    <span>Apartment</span>
+                    <span class="material-icons text-white">arrow_drop_down</span>
+                </button>
 
-        <button class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
-            <span>2BD</span>
-            <span class="material-icons text-white">arrow_drop_down</span>
-        </button>
-    </div>
+                <button
+                    class="px-4 py-2 rounded-full bg-black text-white flex items-center space-x-2 border border-gray-600 hover:bg-gray-800">
+                    <span>2BD</span>
+                    <span class="material-icons text-white">arrow_drop_down</span>
+                </button>
+            </div>
 
-    <div class="flex items-center space-x-4">
-         <button class="mapButton flex items-center justify-center p-3 rounded-full bg-black text-white hover:bg-gray-800">
-            <span class="material-icons">map</span>
-        </button>
-        <button onclick="openCreatePostModal()" class="px-6 py-2 rounded-full bg-yellow-400 text-white font-bold flex items-center space-x-2 hover:bg-yellow-300 transition duration-300">
-            <span class="material-icons">add</span>
-            <span>Create Post</span>
-        </button>
-    </div>
-</div>
-
-
-<div id="listingSection" class="grid grid-cols-4 gap-6 rounded-t-3xl px-8 py-8 bg-[#F7F6F2]">
-
-    <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')" class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-        <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-            <span>Rent</span>
-        </div>
-            
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
+            <div class="flex items-center space-x-4">
+                <button
+                    class="mapButton flex items-center justify-center p-3 rounded-full bg-black text-white hover:bg-gray-800">
+                    <span class="material-icons">map</span>
+                </button>
+                <button onclick="openCreatePostModal()"
+                    class="px-6 py-2 rounded-full bg-yellow-400 text-white font-bold flex items-center space-x-2 hover:bg-yellow-300 transition duration-300">
+                    <span class="material-icons">add</span>
+                    <span>Create Post</span>
+                </button>
             </div>
         </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
-            </p>
-            <p class="text-sm text-gray-600 mt-2">Rent: 
-                <span class="font-medium text-black">40K</span>
-            </p>
-        </div>
-    </div>
-
-    <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')" class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Less</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Barisal
-            </p>
-            <p class="text-sm text-gray-600 mt-2">For Sell: 
-                <span class="font-medium text-black">400k</span>
-            </p>
-        </div>
-    </div>
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Sell</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
-            </p>
-            <p class="text-sm text-gray-600 mt-2">Rent: 
-                <span class="font-medium text-black">40K</span>
-            </p>
-        </div>
-    </div>
 
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Less</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Barisal
-            </p>
-            <p class="text-sm text-gray-600 mt-2">For Sell: 
-                <span class="font-medium text-black">400k</span>
-            </p>
-        </div>
-    </div>
+        <div id="listingSection" class="grid grid-cols-4 gap-6 rounded-t-3xl px-8 py-8 bg-[#F7F6F2]">
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Rent</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
-            </p>
-            <p class="text-sm text-gray-600 mt-2">Rent: 
-                <span class="font-medium text-black">40K</span>
-            </p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Sell</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Barisal
-            </p>
-            <p class="text-sm text-gray-600 mt-2">For Sell: 
-                <span class="font-medium text-black">400k</span>
-            </p>
-        </div>
-    </div>
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Less</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
-            </p>
-            <p class="text-sm text-gray-600 mt-2">Rent: 
-                <span class="font-medium text-black">40K</span>
-            </p>
-        </div>
-    </div>
-
-
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl" style="height: auto; max-height: 300px;">
-        <div class="relative">
-            <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="Property" class="w-full h-48 object-cover rounded-t-lg">
-            <div class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
-                <span>Sell</span>
-            </div>
-                
-            <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
-                <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg" alt="User" class="rounded-full w-10 h-10">
-            </div>
-        </div>
-        <div class="p-4 text-center">
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
-            </p>
-            <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
-                <span class="material-icons text-gray-400 mr-1">place</span> Barisal
-            </p>
-            <p class="text-sm text-gray-600 mt-2">For Sell: 
-                <span class="font-medium text-black">400k</span>
-            </p>
-        </div>
-    </div>
-</div>
-<!-- Modal  -->
-<div id="createPostModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-    <div class="bg-[#F7F6F2] relative w-[60%] h-[80%] max-w-4xl p-8 rounded-xl">
-
-        <button
-            class="absolute top-4 right-4 bg-white text-black p-2 rounded-full"
-            onclick="closeCreatePostModal()"
-        >
-            <span class="material-icons">close</span>
-        </button>
-
-
-        <div>
-            <div class="grid grid-cols-2 gap-6">
-                
-                <div class="space-y-4">
-
-                    <div class="relative">
-                        <input 
-                            type="file" 
-                            id="imageUpload" 
-                            class="hidden" 
-                            onchange="previewImage(event)"
-                        />
-                        <label for="imageUpload" class="cursor-pointer">
-                            <img 
-                                id="mainImage" 
-                                src="https://via.placeholder.com/600x400" 
-                                alt="Main Image" 
-                                class="rounded-xl object-cover w-full h-72"
-                            />
-                        </label>
-
+            <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')"
+                class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Rent</span>
                     </div>
 
-                    <div class="grid grid-cols-4 gap-4">
-                        <input 
-                            type="file" 
-                            id="thumb1" 
-                            class="hidden" 
-                            onchange="previewThumbnail(event, 1)"
-                        />
-                        <label for="thumb1">
-                            <img 
-                                id="thumbImage1" 
-                                src="https://via.placeholder.com/100x100" 
-                                alt="Thumbnail 1" 
-                                class="rounded-lg object-cover h-20 w-full cursor-pointer"
-                            />
-                        </label>
-                        <input 
-                            type="file" 
-                            id="thumb2" 
-                            class="hidden" 
-                            onchange="previewThumbnail(event, 2)"
-                        />
-                        <label for="thumb2">
-                            <img 
-                                id="thumbImage2" 
-                                src="https://via.placeholder.com/100x100" 
-                                alt="Thumbnail 2" 
-                                class="rounded-lg object-cover h-20 w-full cursor-pointer"
-                            />
-                        </label>
-                        <input 
-                            type="file" 
-                            id="thumb3" 
-                            class="hidden" 
-                            onchange="previewThumbnail(event, 3)"
-                        />
-                        <label for="thumb3">
-                            <img 
-                                id="thumbImage3" 
-                                src="https://via.placeholder.com/100x100" 
-                                alt="Thumbnail 3" 
-                                class="rounded-lg object-cover h-20 w-full cursor-pointer"
-                            />
-                        </label>
-                        <input 
-                            type="file" 
-                            id="thumb4" 
-                            class="hidden" 
-                            onchange="previewThumbnail(event, 4)"
-                        />
-                        <label for="thumb4">
-                            <img 
-                                id="thumbImage4" 
-                                src="https://via.placeholder.com/100x100" 
-                                alt="Thumbnail 4" 
-                                class="rounded-lg object-cover h-20 w-full cursor-pointer"
-                            />
-                        </label>
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
                     </div>
                 </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">Rent:
+                        <span class="font-medium text-black">40K</span>
+                    </p>
+                </div>
+            </div>
 
-                <div class="space-y-6 overflow-y-auto max-h-[70vh]">
-                    <p class="text-4xl font-extrabold text-gray-800">Create Post</p>
+            <div href="postview.html" onclick="slideToNewPage(event, '/postview.html')"
+                class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Less</span>
+                    </div>
 
-                    <div class="bg-white rounded-2xl shadow p-6">
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Barisal
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">For Sell:
+                        <span class="font-medium text-black">400k</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Sell</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">Rent:
+                        <span class="font-medium text-black">40K</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Less</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Barisal
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">For Sell:
+                        <span class="font-medium text-black">400k</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Rent</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">Rent:
+                        <span class="font-medium text-black">40K</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Sell</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Barisal
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">For Sell:
+                        <span class="font-medium text-black">400k</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://media.designcafe.com/wp-content/uploads/2023/07/05141750/aesthetic-room-decor.jpg"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Less</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/close-photo-delighted-aged-person-260nw-1855565896.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Dhaka
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">Rent:
+                        <span class="font-medium text-black">40K</span>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                style="height: auto; max-height: 300px;">
+                <div class="relative">
+                    <img src="https://plus.unsplash.com/premium_photo-1676823547752-1d24e8597047?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGl2aW5nJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Property" class="w-full h-48 object-cover rounded-t-lg">
+                    <div
+                        class="absolute top-3 left-3 bg-black text-white text-xs font-semibold p-2 rounded-full shadow-lg flex items-center">
+                        <span>Sell</span>
+                    </div>
+
+                    <div class="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-white rounded-full p-1">
+                        <img src="https://www.shutterstock.com/image-photo/photo-portrait-bearded-man-pink-260nw-1985502797.jpg"
+                            alt="User" class="rounded-full w-10 h-10">
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">calendar_today</span> Nov 25 - Dec 5
+                    </p>
+                    <p class="text-sm text-gray-500 mb-1 flex items-center justify-center">
+                        <span class="material-icons text-gray-400 mr-1">place</span> Barisal
+                    </p>
+                    <p class="text-sm text-gray-600 mt-2">For Sell:
+                        <span class="font-medium text-black">400k</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal  -->
+        <div id="createPostModal"
+            class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+            <div class="bg-[#F7F6F2] relative w-[60%] h-[80%] max-w-4xl p-8 rounded-xl">
+
+                <button class="absolute top-4 right-4 bg-white text-black p-2 rounded-full"
+                    onclick="closeCreatePostModal()">
+                    <span class="material-icons">close</span>
+                </button>
+
+
+                <div>
+                    <div class="grid grid-cols-2 gap-6">
+
                         <div class="space-y-4">
-                            <div>
-                                <label class="text-sm text-gray-600">Property Name</label>
-                                <input type="text" class="w-full p-3 rounded-lg border" placeholder="e.g. Mirror House" />
+
+                            <div class="relative">
+                                <input type="file" id="imageUpload" class="hidden" onchange="previewImage(event)" />
+                                <label for="imageUpload" class="cursor-pointer">
+                                    <img id="mainImage" src="https://via.placeholder.com/600x400" alt="Main Image"
+                                        class="rounded-xl object-cover w-full h-72" />
+                                </label>
+
                             </div>
 
-                            <div>
-                                <label class="text-sm text-gray-600">Location</label>
-                                <input type="text" class="w-full p-3 rounded-lg border" placeholder="e.g. Dhaka, Bangladesh" />
-                            </div>
-
-                            <div>
-                                <label class="text-sm text-gray-600">Rent Amount</label>
-                                <input type="text" class="w-full p-3 rounded-lg border" placeholder="e.g. $1,500/month" />
-                            </div>
-
-                            <div>
-                                <label class="text-sm text-gray-600">Available Dates</label>
-                                <input type="text" class="w-full p-3 rounded-lg border" placeholder="e.g. Aug 12 – Dec 17" />
+                            <div class="grid grid-cols-4 gap-4">
+                                <input type="file" id="thumb1" class="hidden" onchange="previewThumbnail(event, 1)" />
+                                <label for="thumb1">
+                                    <img id="thumbImage1" src="https://via.placeholder.com/100x100" alt="Thumbnail 1"
+                                        class="rounded-lg object-cover h-20 w-full cursor-pointer" />
+                                </label>
+                                <input type="file" id="thumb2" class="hidden" onchange="previewThumbnail(event, 2)" />
+                                <label for="thumb2">
+                                    <img id="thumbImage2" src="https://via.placeholder.com/100x100" alt="Thumbnail 2"
+                                        class="rounded-lg object-cover h-20 w-full cursor-pointer" />
+                                </label>
+                                <input type="file" id="thumb3" class="hidden" onchange="previewThumbnail(event, 3)" />
+                                <label for="thumb3">
+                                    <img id="thumbImage3" src="https://via.placeholder.com/100x100" alt="Thumbnail 3"
+                                        class="rounded-lg object-cover h-20 w-full cursor-pointer" />
+                                </label>
+                                <input type="file" id="thumb4" class="hidden" onchange="previewThumbnail(event, 4)" />
+                                <label for="thumb4">
+                                    <img id="thumbImage4" src="https://via.placeholder.com/100x100" alt="Thumbnail 4"
+                                        class="rounded-lg object-cover h-20 w-full cursor-pointer" />
+                                </label>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="space-y-6 overflow-y-auto max-h-[70vh]">
+                            <p class="text-4xl font-extrabold text-gray-800">Create Post</p>
 
-                    <div class="bg-white rounded-2xl shadow p-6">
-                        <div class="space-y-4">
-                            <div>
-                                <label class="text-sm text-gray-600">Beds</label>
-                                <input type="number" class="w-full p-3 rounded-lg border" placeholder="e.g. 4 beds" />
+                            <div class="bg-white rounded-2xl shadow p-6">
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="text-sm text-gray-600">Property Name</label>
+                                        <input type="text" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. Mirror House" />
+                                    </div>
+
+                                    <div>
+                                        <label class="text-sm text-gray-600">Location</label>
+                                        <input type="text" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. Dhaka, Bangladesh" />
+                                    </div>
+
+                                    <div>
+                                        <label class="text-sm text-gray-600">Rent Amount</label>
+                                        <input type="text" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. $1,500/month" />
+                                    </div>
+
+                                    <div>
+                                        <label class="text-sm text-gray-600">Available Dates</label>
+                                        <input type="text" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. Aug 12 – Dec 17" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="text-sm text-gray-600">Bathrooms</label>
-                                <input type="number" class="w-full p-3 rounded-lg border" placeholder="e.g. 3 bathrooms" />
+
+                            <div class="bg-white rounded-2xl shadow p-6">
+                                <div class="space-y-4">
+                                    <div>
+                                        <label class="text-sm text-gray-600">Beds</label>
+                                        <input type="number" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. 4 beds" />
+                                    </div>
+
+                                    <div>
+                                        <label class="text-sm text-gray-600">Bathrooms</label>
+                                        <input type="number" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. 3 bathrooms" />
+                                    </div>
+
+                                    <div>
+                                        <label class="text-sm text-gray-600">Property Size (m²)</label>
+                                        <input type="number" class="w-full p-3 rounded-lg border"
+                                            placeholder="e.g. 125 m²" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="text-sm text-gray-600">Property Size (m²)</label>
-                                <input type="number" class="w-full p-3 rounded-lg border" placeholder="e.g. 125 m²" />
+
+                            <div class="bg-white rounded-2xl shadow p-6">
+                                <p class="text-sm text-gray-500 font-medium mb-4">Amenities</p>
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="refrigerator" />
+                                        <label for="refrigerator">Refrigerator</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="desk" />
+                                        <label for="desk">Desk</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="microwave" />
+                                        <label for="microwave">Oven</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="coffeeMachine" />
+                                        <label for="coffeeMachine">Coffee machine</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="parkingSpot" />
+                                        <label for="parkingSpot">Parking spot</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="fireplace" />
+                                        <label for="fireplace">Fireplace</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded-2xl shadow p-6">
+                                <p class="text-sm text-gray-500 font-medium mb-4">Rules</p>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="pets" />
+                                        <label for="pets">Pet friendly</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="noSmoking" />
+                                        <label for="noSmoking">No smoking</label>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <input type="checkbox" id="children" />
+                                        <label for="children">Suitable for children</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="bg-white rounded-2xl shadow p-6">
+                                <p class="text-sm text-gray-500 font-medium mb-4">Neighborhood</p>
+                                <div class="relative w-full h-48 rounded-lg overflow-hidden">
+                                    <img src="https://via.placeholder.com/400x300" alt="Neighborhood Map" />
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end mt-4">
+                                <button class="bg-black text-white py-2 px-3 rounded-lg shadow-lg">
+                                    Create Post
+                                </button>
                             </div>
                         </div>
-                    </div>
-
-
-                    <div class="bg-white rounded-2xl shadow p-6">
-                        <p class="text-sm text-gray-500 font-medium mb-4">Amenities</p>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="refrigerator" />
-                                <label for="refrigerator">Refrigerator</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="desk" />
-                                <label for="desk">Desk</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="microwave" />
-                                <label for="microwave">Oven</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="coffeeMachine" />
-                                <label for="coffeeMachine">Coffee machine</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="parkingSpot" />
-                                <label for="parkingSpot">Parking spot</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="fireplace" />
-                                <label for="fireplace">Fireplace</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow p-6">
-                        <p class="text-sm text-gray-500 font-medium mb-4">Rules</p>
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="pets" />
-                                <label for="pets">Pet friendly</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="noSmoking" />
-                                <label for="noSmoking">No smoking</label>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <input type="checkbox" id="children" />
-                                <label for="children">Suitable for children</label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white rounded-2xl shadow p-6">
-                        <p class="text-sm text-gray-500 font-medium mb-4">Neighborhood</p>
-                        <div class="relative w-full h-48 rounded-lg overflow-hidden">
-                            <img src="https://via.placeholder.com/400x300" alt="Neighborhood Map" />
-                        </div>
-                    </div>
-
-                    <div class="flex justify-end mt-4">
-                        <button class="bg-black text-white py-2 px-3 rounded-lg shadow-lg">
-                            Create Post
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 
-<div id="mapSection" class="col-span-4 h-screen bg-gray-200 rounded-lg transform translate-y-[100%] opacity-0 transition-all duration-500 ease-in-out hidden">
-    <div id="map" class="h-full"></div>
-</div>
+        <div id="mapSection"
+            class="col-span-4 h-screen bg-gray-200 rounded-lg transform translate-y-[100%] opacity-0 transition-all duration-500 ease-in-out hidden">
+            <div id="map" class="h-full"></div>
+        </div>
 
     </div>
     <!-- Animation Div -->
-<div id="upTransition" class="fixed bottom-0 left-0 w-full h-full bg-white transform translate-y-full transition-all duration-500 z-50"></div>
+    <div id="upTransition"
+        class="fixed bottom-0 left-0 w-full h-full bg-white transform translate-y-full transition-all duration-500 z-50">
+    </div>
 
     <script>
-        document.querySelector('.mapButton').addEventListener('click', function() {
+        document.querySelector('.mapButton').addEventListener('click', function () {
             var mapSection = document.getElementById('mapSection');
             var listingSection = document.getElementById('listingSection');
-    
+
 
             if (mapSection.classList.contains('opacity-100')) {
                 mapSection.classList.remove('translate-y-0', 'opacity-100');
                 mapSection.classList.add('translate-y-[100%]', 'opacity-0');
-                
-                setTimeout(function() {
+
+                setTimeout(function () {
                     mapSection.classList.add('hidden');
                     listingSection.classList.remove('hidden');
                 }, 500);
@@ -515,14 +518,14 @@
 
                 listingSection.classList.add('hidden');
                 mapSection.classList.remove('hidden');
-                
-                setTimeout(function() {
+
+                setTimeout(function () {
                     mapSection.classList.remove('translate-y-[100%]', 'opacity-0');
                     mapSection.classList.add('translate-y-0', 'opacity-100');
-                    
+
                     if (!mapSection._leaflet_id) {
                         var map = L.map(mapSection).setView([23.8103, 90.4125], 13); // Set initial coordinates (Dhaka, Bangladesh)
-                        
+
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         }).addTo(map);
@@ -533,28 +536,28 @@
 
         function slideToNewPage(event, url) {
             event.preventDefault();
-          
+
 
             const transition = document.getElementById('upTransition');
-          
+
             transition.classList.remove('translate-y-full');
-          
-        
+
+
             setTimeout(() => {
-              window.location.href = url;
-            }, 500); 
-          }
+                window.location.href = url;
+            }, 500);
+        }
 
-    function openCreatePostModal() {
-        document.getElementById('createPostModal').classList.remove('hidden');
-    }
+        function openCreatePostModal() {
+            document.getElementById('createPostModal').classList.remove('hidden');
+        }
 
-    function closeCreatePostModal() {
-        document.getElementById('createPostModal').classList.add('hidden');
-    }
-          
+        function closeCreatePostModal() {
+            document.getElementById('createPostModal').classList.add('hidden');
+        }
+
     </script>
-    
+
 
 </body>
 
