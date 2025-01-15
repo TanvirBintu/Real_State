@@ -20,19 +20,30 @@
                     class="text-sm font-medium">Solution</span></h1>
         </div>
         <div class="flex items-center space-x-8">
-            <button class="text-white flex items-center space-x-2">
-                <i class="fas fa-search"></i>
-                <span>Explore</span>
+            <button
+                class="text-yellow-400 bg-gray-700 px-4 py-2 flex items-center space-x-2 rounded-full shadow-lg hover:bg-gray-600 transition-all">
+                <span class="material-icons">home</span>
+                <span>Home</span>
             </button>
-            <button class="text-white flex items-center space-x-2">
-                <i class="fas fa-heart"></i>
+
+            <button
+                onclick="slideToNewPage(event, '/userdash1.html')" class="text-white px-4 py-2 flex items-center space-x-2 rounded-full hover:bg-gray-600 transition-all">
+                <span class="material-icons">apartment</span>
+                <span>My Apartment</span>
+            </button>
+
+            <button
+                class="text-white px-4 py-2 flex items-center space-x-2 rounded-full hover:bg-gray-600 transition-all">
+                <span class="material-icons">favorite</span>
                 <span>Favorites</span>
             </button>
-            <button class="text-white flex items-center space-x-2 relative">
-                <i class="fas fa-comments"></i>
+
+            <button
+                class="text-white px-4 py-2 flex items-center space-x-2 relative rounded-full hover:bg-gray-600 transition-all">
+                <span class="material-icons">chat</span>
                 <span>Chat</span>
                 <span
-                    class="absolute top-0 right-0 bg-red-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center">4</span>
+                    class="absolute top-1 right-0 bg-red-500 text-xs text-white rounded-full w-5 h-5 flex items-center justify-center">4</span>
             </button>
         </div>
         <div class="flex items-center space-x-4">
